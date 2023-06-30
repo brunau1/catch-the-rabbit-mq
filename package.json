@@ -1,0 +1,60 @@
+{
+  "name": "catch-the-rabbit-mq",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/brunau1/catch-the-rabbit-mq.git",
+  "author": "Bruno Santos <brunosantosprotec@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --runInBand --colors",
+    "test:unit": "yarn test --config=tests/unit/jest.config.ts",
+    "test:unit:coverage": "yarn test:unit --coverage --no-cache --ci",
+    "test:integration": "yarn test --config=tests/integration/jest.config.ts",
+    "test:integration:coverage": "yarn test:integration --coverage --no-cache --ci",
+    "docker:rabbit:up": "docker-compose up -d test-wallet-rabbitmq"
+  },
+  "devDependencies": {
+    "gts": "3.1.0",
+    "jest": "27.2.3",
+    "moq.ts": "7.3.4",
+    "@types/amqplib": "0.10.1"
+  },
+  "dependencies": {
+    "amqplib": "0.10.3"
+  },
+  "prettier": "gts/.prettierrc.json",
+  "eslintConfig": {
+    "extends": "./node_modules/gts/",
+    "plugins": [
+      "simple-import-sort"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ],
+      "node/no-unpublished-import": 0,
+      "node/no-extraneous-import": 0,
+      "node/no-extraneous-require": 0,
+      "simple-import-sort/exports": "error",
+      "simple-import-sort/imports": "error",
+      "no-process-exit": 0,
+      "no-console": 1,
+      "@typescript-eslint/no-unused-vars": [
+        "error"
+      ],
+      "max-classes-per-file": [
+        "error",
+        1
+      ]
+    },
+    "ignorePatterns": [
+      "node_modules/",
+      "coverage*/",
+      "docs/",
+      "build/"
+    ]
+  }
+}
