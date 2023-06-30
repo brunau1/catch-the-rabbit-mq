@@ -11,13 +11,17 @@
     "test:unit:coverage": "yarn test:unit --coverage --no-cache --ci",
     "test:integration": "yarn test --config=tests/integration/jest.config.ts",
     "test:integration:coverage": "yarn test:integration --coverage --no-cache --ci",
-    "docker:rabbit:up": "docker-compose up -d test-wallet-rabbitmq"
+    "docker:rabbit:up": "docker-compose up -d test-rabbitmq"
   },
   "devDependencies": {
+    "@types/amqplib": "^0.10.1",
+    "@types/jest": "29.5.2",
+    "@types/node": "^20.3.2",
+    "eslint-plugin-simple-import-sort": "10.0.0",
     "gts": "3.1.0",
     "jest": "27.2.3",
     "moq.ts": "7.3.4",
-    "@types/amqplib": "0.10.1"
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "amqplib": "0.10.3"
