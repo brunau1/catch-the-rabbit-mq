@@ -1,9 +1,9 @@
 import {UUID} from 'crypto';
 
-export type QueueMessageDto<T> = {
+export type QueueMessageDto = {
   id: UUID;
   origin: string;
-  payload: T;
+  payload: unknown;
   timestamp: number;
   description?: string;
 };

@@ -1,3 +1,3 @@
-export interface Consumer {
+export interface IConsumer {
   consume(): void;
 }

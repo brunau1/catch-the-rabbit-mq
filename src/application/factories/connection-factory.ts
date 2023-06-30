@@ -1,12 +1,12 @@
 import {Configuration} from '../../core/interfaces/configuration';
-import {Consumer} from '../../core/interfaces/consumer';
-import {Producer} from '../../core/interfaces/producer';
+import {IConsumer} from '../../core/interfaces/consumer';
+import {IProducer} from '../../core/interfaces/producer';
 
 export class ConnectionFactory {
-  static makeProducer(configs: Configuration): Producer {
+  static makeProducer(configs: Configuration): IProducer {
     throw new Error('Method not implemented.');
   }
-  static makeConsumer(configs: Configuration): Consumer {
+  static makeConsumer(configs: Configuration): IConsumer {
     throw new Error('Method not implemented.');
   }
 }
